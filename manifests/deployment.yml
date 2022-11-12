@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "bsak8snov095mp-3f67"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "bsak8snov095mp-3f67"
+  template:
+    metadata:
+      labels:
+        app: "bsak8snov095mp-3f67"
+    spec:
+      containers:
+        - name: "bsak8snov095mp-3f67"
+          image: "acrfrgrendering.azurecr.io/bsak8snov095mp"
+          ports:
+          - containerPort: 80
