@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "frgk8s-6c10"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "frgk8s-6c10"
+  template:
+    metadata:
+      labels:
+        app: "frgk8s-6c10"
+    spec:
+      containers:
+        - name: "frgk8s-6c10"
+          image: "frgacr.azurecr.io/frgk8s"
+          ports:
+          - containerPort: 80
